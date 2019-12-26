@@ -7,4 +7,4 @@
  php composer.phar dump-autoload
  rm -rf var/cache
 
-mysql -u betaogan_betaoga -p  betaogan_backoffice < b2bogans_backoffice.sql
+mysql -u aktarim_yaplian_db_username -p  aktarim_yapilan_yeni_db_name < aktarilacak_sql_file.sql

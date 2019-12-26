@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82324dda-7606-4390-b351-7d342e51213d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ignoreDir/sunucuya_atilinca_yapilacaklar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ignoreDir/sunucuya_atilinca_yapilacaklar.txt" afterDir="false" />
     </list>
     <ignored path="takim_yönet.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,15 +27,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1410">
-              <caret line="94" column="23" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Project/AdminBundle/Entity/User.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -108,7 +99,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -116,6 +107,15 @@
                 <caret line="3" column="108" selection-start-line="3" selection-start-column="108" selection-end-line="3" selection-end-column="108" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ignoreDir/sunucuya_atilinca_yapilacaklar.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="92" selection-start-line="9" selection-start-column="92" selection-end-line="9" selection-end-column="92" />
             </state>
           </provider>
         </entry>
@@ -142,7 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Resources/views/core/button/core_button.html.twig" />
         <option value="$PROJECT_DIR$/DİKKAT_SERVERA_DOSYALARI_ATARKEN/önemli.txt" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/Project/Utils/Custom/readme.md" />
@@ -193,6 +192,7 @@
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Project/Utils/Core/FormTypes/DatePicker/DatePickerType.php" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/ignoreDir/sunucuya_atilinca_yapilacaklar.txt" />
       </list>
     </option>
   </component>
@@ -277,6 +277,11 @@
             <path>
               <item name="SymfonyBase" type="b2602c69:ProjectViewProjectNode" />
               <item name="SymfonyBase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SymfonyBase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SymfonyBase" type="462c0819:PsiDirectoryNode" />
+              <item name="ignoreDir" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -393,12 +398,12 @@
       <workItem from="1576480952558" duration="16000" />
       <workItem from="1577278936479" duration="5738000" />
       <workItem from="1577344075399" duration="236000" />
-      <workItem from="1577344700001" duration="1213000" />
+      <workItem from="1577344700001" duration="1360000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45359000" />
+    <option name="totallyTimeSpent" value="45506000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1668" y="75" width="1440" height="827" extended-state="0" />
@@ -415,7 +420,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49427754" weight="0.65442175" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49427754" visible="true" weight="0.6530612" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50572246" side_tool="true" weight="0.28606966" />
       <window_info anchor="bottom" id="Application Servers" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -440,13 +445,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Project/Utils/Core/Php/PushNotificationOld.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Project/AdminBundle/Resources/views/admin_base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -792,6 +790,13 @@
             <caret line="3" column="108" selection-start-line="3" selection-start-column="108" selection-end-line="3" selection-end-column="108" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ignoreDir/sunucuya_atilinca_yapilacaklar.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="92" selection-start-line="9" selection-start-column="92" selection-end-line="9" selection-end-column="92" />
         </state>
       </provider>
     </entry>

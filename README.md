@@ -1,4 +1,4 @@
-takim_yönet
+Symfony Base
 ============
 
-A Symfony project created on December 30, 2016, 2:26 pm.
+Amaç her seferinde symfony peojesi oluşturmadan tüm ihtiyacımız olan ortamı indirip hemen kodlamaya başlamak

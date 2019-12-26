@@ -1,2 +1,4 @@
 parameters:
     maintenance: false
+    allowed_ids: []
+    allowed_roles: [ROLE_ADMIN]

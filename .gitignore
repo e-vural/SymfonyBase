@@ -21,9 +21,7 @@
 /var/log/*
 !var/log/.gitkeep
 
-# Parameters
-/app/config/parameters.yml
-/app/config/parameters.ini
+
 
 # Managed by Composer
 /app/bootstrap.php.cache
@@ -44,11 +42,18 @@
 # Build data
 /build/
 
-# Composer PHAR
-/composer.phar
 
 # Backup entities generated with doctrine:generate:entities command
 **/Entity/*~
 
 # Embedded web-server pid file
 /.web-server-pid
+
+#İndirdikten sonra alttakileri yorumdan çıkar
+
+#/composer.phar
+#/app/config/parameters.yml
+#/app/config/parameters.ini
+#DİKKAT_SERVERA_DOSYALARI_ATARKEN
+#ignoreDir
+

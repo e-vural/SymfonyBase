@@ -9,6 +9,8 @@
 namespace Project\Utils\Core\Php;
 
 
+use Ramsey\Uuid\Uuid;
+
 class Tools
 {
 
@@ -55,8 +57,29 @@ class Tools
     }
 
     public function getUuid(){
-        return uniqid("_");
+        $uuid1 = Uuid::uuid1();
+        return $uuid1->toString(); // i.e. e4eaaaf2-d142-11e1-b3e4-080027620cdd
     }
+
+
+    public function tr_strtoupper($text)
+    {
+        $search=array("ç","i","ı","ğ","ö","ş","ü");
+        $replace=array("Ç","İ","I","Ğ","Ö","Ş","Ü");
+        $text=str_replace($search,$replace,$text);
+        $text=strtoupper($text);
+        return $text;
+    }
+
+    public function tr_strtolower($text)
+    {
+        $search=array("ç","i","ı","ğ","ö","ş","ü");
+        $replace=array("Ç","İ","I","Ğ","Ö","Ş","Ü");
+        $text=str_replace($search,$replace,$text);
+        $text=strtolower($text);
+        return $text;
+    }
+
 
     public function dateLocaleParser($date,$pattern = "d-MMMM-Y EEEE HH:mm"){
         //http://userguide.icu-project.org/formatparse/datetime
@@ -65,6 +88,11 @@ class Tools
         $formatter->setPattern($pattern);
         return $formatter->format($date);
     }
+
+
+    /**
+     * AŞAĞIDAKİLER HER PROJEDE İHTİYAÇ OLMAYABİLİR
+     */
 
     public function hesapMakinesi($sayi,$sayi2,$islem = "+"){
         $p = $sayi.$islem.$sayi2;
@@ -93,4 +121,6 @@ class Tools
         return $this->numberFormatter($kdvDahil / (1+($kdvOrani / 100)),true);
 
     }
+
+
 }

@@ -80,6 +80,23 @@ services:
         public:  true
         arguments: ["@service_container"]
 
+
+    # Monolog mesajı satır formatı
+    monolog.formatter.session_request:
+        class: 'Monolog\Formatter\LineFormatter'
+        arguments:
+            - "[%%datetime%%] [%%extra.token%%] %%channel%%.%%level_name%%: %%message%% %%context%% %%extra%%\n"
+
+    # Her isteğin sonuna session bilgisi ekleme
+    monolog.processor.session_request:
+        class: 'Project\Utils\Core\Php\Monolog\SessionRequestProcessor'
+        arguments:  ["@session", "@security.token_storage", "@request_stack"]
+        tags:
+            - { name: monolog.processor, method: processRecord }
+
+    monolog.formatter.html:
+        class: 'Monolog\Formatter\HtmlFormatter'
+
 #TODO deneme için burası. datatable override yapma çalışması
     sg_datatables.datatable.abstract:
         class: Project\AdminBundle\Datatables\Traits\AbstractDatatable
@@ -104,3 +121,5 @@ services:
             - '@doctrine.orm.entity_manager'
             - '@twig'
             - '@service_container'
+
+

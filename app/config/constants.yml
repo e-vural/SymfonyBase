@@ -13,6 +13,10 @@ twig:
       success: "%flash_success_alias%"
       warning: "%flash_warning_alias%"
       info: "%flash_info_alias%"
+  form_themes:
+    #    - 'bootstrap_3_horizontal_layout.html.twig'
+    #    - 'form_themes/basic_form_theme.html.twig'
+    - 'form_themes/col_md_6_form_theme.html.twig'
 
 #paramaters:
 #    upload_dir: "upload"

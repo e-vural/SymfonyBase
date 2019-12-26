@@ -4,6 +4,7 @@ namespace Project\AdminBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
+use Project\AdminBundle\Entity\Traits\TimestampsTrait;
 
 /**
  * @ORM\Entity
@@ -11,6 +12,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class User extends BaseUser
 {
+    use TimestampsTrait;
+
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")

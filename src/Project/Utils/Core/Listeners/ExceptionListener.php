@@ -23,8 +23,8 @@ class ExceptionListener
         // You get the exception object from the received event
         $exception = $event->getException();
 
-        dump($exception);
-        dump($event);
+//        dump($exception);
+//        dump($event);
 
 
         $message = sprintf($exception->getMessage(),
@@ -44,7 +44,7 @@ class ExceptionListener
 
             echo $message;
 
-            dump(strpos($message,"kjhgf"));
+//            dump(strpos($message,"kjhgf"));
             exit;
             if(strpos($message,"No route found")){
                 echo "var";

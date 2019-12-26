@@ -58,13 +58,13 @@ class SystemSettings
     }
 
 
-    public function getUuid()
-    {
-
-        //TODO ramsey uuid bundle kurulacak
-        $uuid1 = Uuid::uuid1();
-        return $uuid1->toString(); // i.e. e4eaaaf2-d142-11e1-b3e4-080027620cdd
-
-    }
+//    public function getUuid()
+//    {
+//
+//        //TODO ramsey uuid bundle kurulacak
+//        $uuid1 = Uuid::uuid1();
+//        return $uuid1->toString(); // i.e. e4eaaaf2-d142-11e1-b3e4-080027620cdd
+//
+//    }
 
 }

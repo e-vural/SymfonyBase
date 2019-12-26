@@ -1,0 +1,21 @@
+#monolog:
+#    handlers:
+#        main:
+#            type:   stream
+#            path:   "%kernel.logs_dir%/hata.log"
+#            level:  error
+#            formatter: monolog.formatter.session_request
+#        grouped:
+#            type:    group
+#            members: [buffered]
+#        buffered:
+#            type:    buffer
+#            handler: swift
+#        swift:
+#            type:       swift_mailer
+#            from_email: 'test@test.com'
+#            to_email:   'test@test.com'
+#            subject:    Hata Bildirimi
+#            level:      error
+#            content_type: text/html
+#            formatter:  monolog.formatter.html

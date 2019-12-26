@@ -1,0 +1,10 @@
+ php bin/console do:sc:up --force
+
+ git reset --hard origin/master
+ git pull origin master
+
+ php composer.phar dump-autoload --optimize --classmap-authoritative
+ php composer.phar dump-autoload
+ rm -rf var/cache
+
+mysql -u betaogan_betaoga -p  betaogan_backoffice < b2bogans_backoffice.sql

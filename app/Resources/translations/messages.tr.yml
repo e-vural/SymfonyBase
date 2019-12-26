@@ -1,0 +1,11 @@
+common:
+    empty: "Boş"
+    save: "Kaydet"
+    delete: "Sil"
+    edit: "Düzenle"
+    detail: "Detay"
+    next: "İleri"
+    previous: "Geri"
+    finish: "Bitti"
+    cancel: "İptal"
+    filter: "Filtre"

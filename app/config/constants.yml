@@ -1,0 +1,19 @@
+parameters:
+    flash_error_alias: "error"
+    flash_success_alias: "success"
+    flash_warning_alias: "warning"
+    flash_info_alias: "info"
+    upload_dir: "upload"
+    avatar_dir: "%upload_dir%/avatar"
+
+twig:
+  globals:
+    flash:
+      error: "%flash_error_alias%"
+      success: "%flash_success_alias%"
+      warning: "%flash_warning_alias%"
+      info: "%flash_info_alias%"
+
+#paramaters:
+#    upload_dir: "upload"
+#    avatar_dir:

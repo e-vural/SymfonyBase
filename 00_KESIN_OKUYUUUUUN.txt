@@ -1,0 +1,28 @@
+
+1- Projede app/Resources/views içindeki base.html.twig   tüm projenin base twig dosyasıdır.
+Admin içindede admin_base.html.twig vardır bu dosya base.html.twig extend etmiştir. YENİ BUNDLE AÇTIĞINIZDA O BUNDLE İÇİN BİR BASE AÇINIZ  VE app içindeki base..html.twig dosyasını extends edip o şekilde kullnınız.
+
+
+2- Tüm sorguları lütfen entity repository içine yazalım. Birden fazla yerde inserti işlemi varsa bunuda reposityorylerde yapabiliriz.
+
+3- Kullanacağınız kendi servislerinizi utils içindeki Custom klasörüne yazınız.
+
+4- theme klasörü içine tüm tema dosyalarınızı atınız. web/assets içine ise sadece kullanılacak olanları atınız. gereksiz dosya yüklemesi yapmayınız. Ayrıca theme içindeki dosyaları production da sunucuya yüklemeyiniz
+
+
+Öncelikle dev ortamında sunucuya çıkarsanız.
+
+var/cache/dev/appDevDebugProjectContainer.xml
+gibi dosyaların içinde veritabanı bilgileri bile tutulur.
+
+var/logs/dev/dev.log içinde de yaptıgınız herşey tutulur.
+
+bu klasörler dışarıdan erişime açık gelir. htaccess ile kesinlikle bunlara erişimi engelliyoruz.
+
+ayrıca robots.txt ile googleın indexlemesini engelliyoruz.
+
+config_dev.yml içinden monolog kısmı tamamen yorum yapılırsa artık log tutmaz.
+
+app_dev.php içinde ki true olan debug değerini false yapmalıyız. (dump() fonksiyonu çalışmayacaktır.)
+
+sunucu da dev ortamında çalışmak tehlikeli prod ortamında çalışmak en garantisi.

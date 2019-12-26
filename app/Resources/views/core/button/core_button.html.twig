@@ -1,0 +1,23 @@
+{% macro button_primary(text,extra_class, attr ) %}
+    <button class="btn btn-primary {{ extra_class|default() }}" {{ attr|default() }}>{{ text }}</button>
+{% endmacro %}
+
+{% macro button_success(text,extra_class, attr ) %}
+    <button class="btn btn-success {{ extra_class|default() }}" {{ attr|default() }}> {{ text }} </button>
+{% endmacro %}
+
+{% macro button_warning(text,extra_class, attr ) %}
+    <button class="btn btn-warning {{ extra_class|default() }}" {{ attr|default() }}>{{ text }}</button>
+{% endmacro %}
+
+{% macro button_danger(text,extra_class, attr ) %}
+    <button class="btn btn-danger {{ extra_class|default() }}" {{ attr|default() }}>{{ text }}</button>
+{% endmacro %}
+
+{% macro button_info(text,extra_class, attr ) %}
+    <button class="btn btn-info {{ extra_class|default() }}" {{ attr|default() }}>{{ text }}</button>
+{% endmacro %}
+
+{% macro button_default(text,extra_class, attr ) %}
+    <button class="btn btn-default {{ extra_class|default() }}" {{ attr|default() }}>{{ text }}</button>
+{% endmacro %}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+        <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+        {% stylesheets filter="?uglifycss"  output="css/compiled_all.css"
+        "assets/css/bootstrap/bootstrap.min.css"
+        "assets/css/nprogress.css"
+        "assets/css/datarangepicker/daterangepicker.css"
+        "assets/js/jquery-confirm/dist/jquery-confirm.min.css"
+        "assets/js/introJs-2.5/css/introjs.min.css"
+        "assets/css/custom.css"
+        "assets/css/my-css.css"
+        %}
+        {#<link rel="stylesheet" href="{{ asset_url }}" />#}
+        {% endstylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/compiled_all.css') }}" />
+
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% javascripts output="js/compiled1.js"
+        'assets/js/jquery/jquery.min.js'
+        'assets/js/bootstrap/bootstrap.min.js'
+        'assets/js/fastclick/fastclick.js'
+        'assets/js/nprogress/nprogress.js'
+        'assets/js/chartjs/Chart.min.js'
+        'assets/js/moment/moment.min.js'
+        'assets/js/datarangepicker/daterangepicker.js'
+        'assets/js/jquery-sparkline/jquery.sparkline.min.js'
+        'assets/js/datejs/date.js'
+        'assets/js/datejs/i18n/tr-TR.js'
+        'assets/js/jquery-confirm/dist/jquery-confirm.min.js'
+        'assets/js/introJs-2.5/js/intro.min.js'
+        'assets/js/myJS/myJS.js'
+        'assets/js/custom.js' filter='?uglifyjs2' %}
+        {#<script src="{{ asset_url }}"></script>#}
+        {% endjavascripts %}
+        <script src="{{ asset('js/compiled1.js') }}"></script>
+
+        {% block javascripts %}{% endblock %}
+    </body>
+
+
+</html>

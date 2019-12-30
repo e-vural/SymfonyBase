@@ -73,6 +73,18 @@ trait HelperTrait
         return $response;
     }
 
+    public function setData()
+    {
+        $entity = $this->form->getData();
+        $em = $this->getEntityManager();
+        $em->persist($entity);
+
+        if($this->isFlush){
+            $em->flush();
+        }
+
+        return true;
+    }
 
     /**
      * @return FormInterface
@@ -96,18 +108,7 @@ trait HelperTrait
 //
 //    }
 
-    public function setData()
-    {
-        $entity = $this->form->getData();
-        $em = $this->getEntityManager();
-        $em->persist($entity);
 
-        if($this->isFlush){
-            $em->flush();
-        }
-
-        return true;
-    }
 
 
     public function getFormHtml(){

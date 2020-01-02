@@ -8,6 +8,7 @@ window._kodpit = function () {
             if (!activeClass) {
                 activeClass = "active";
             }
+
             var $mainSidebar = $(mainSidebar);
             var $breadcrumb = $(breadcrumb);
             var ol = $breadcrumb.find("ol.breadcrumb");
@@ -258,7 +259,7 @@ window._kodpit = function () {
         // return $alert;
 
     }
-    var alert = {
+    var myAlert = {
         // alert: {
             info: function (title, msg, options) {
                 return showAlert("info", title, msg, options);
@@ -388,7 +389,7 @@ window._kodpit = function () {
     kodpitObj.utils = utils;
     kodpitObj.form = form;
     kodpitObj.toast = toast;
-    kodpitObj.alert = alert;
+    kodpitObj.alert = myAlert;
     kodpitObj.loading = loading;
 
     /**

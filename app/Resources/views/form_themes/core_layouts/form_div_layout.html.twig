@@ -1,5 +1,4 @@
 {# Widgets #}
-
 {%- block form_widget -%}
     {% if compound %}
         {{- block('form_widget_compound') -}}
@@ -254,6 +253,7 @@
 {# Labels #}
 
 {%- block form_label -%}
+
     {% if label is not same as(false) -%}
         {% if not compound -%}
             {% set label_attr = label_attr|merge({'for': id}) %}
@@ -409,3 +409,14 @@
         {%- endif -%}
     {%- endfor -%}
 {%- endblock attributes -%}
+
+{% block file_widget %}
+    {% spaceless %}
+
+        {{ block('form_widget') }}
+        {% if  image_url is defined and image_url is not null %}
+            <img width="{{ width|default('200') }}" height="{{ height|default }}" src="{{ asset(image_url) }}"/>
+        {% endif %}
+
+    {% endspaceless %}
+{% endblock %}

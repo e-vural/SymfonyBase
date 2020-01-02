@@ -33,13 +33,17 @@
 {%- endblock money_widget %}
 
 {% block checkbox_widget -%}
+
     {%- set parent_label_class = parent_label_class|default(label_attr.class|default('')) -%}
     {% if 'checkbox-inline' in parent_label_class %}
         {{- form_label(form, null, { widget: parent() }) -}}
     {% else -%}
-        <div class="checkbox">
-            {{- form_label(form, null, { widget: parent() }) -}}
+        <div class="">
+            {{ parent() }}
         </div>
+        {#        <div class="checkbox">#}
+        {#            {{- form_label(form, null, { widget: parent() }) -}}#}
+        {#        </div>#}
     {%- endif -%}
 {%- endblock checkbox_widget %}
 
@@ -70,7 +74,8 @@
 {% block checkbox_label -%}
     {%- set label_attr = label_attr|merge({'for': id}) -%}
 
-    {{- block('checkbox_radio_label') -}}
+    {{- block('form_label') -}}
+    {#    {{- block('checkbox_radio_label') -}}#}
 {%- endblock checkbox_label %}
 
 {% block radio_label -%}
@@ -80,15 +85,19 @@
 {%- endblock radio_label %}
 
 {% block checkbox_radio_label -%}
+
     {# Do not display the label if widget is not defined in order to prevent double label rendering #}
     {%- if widget is defined -%}
+
         {%- if required -%}
             {%- set label_attr = label_attr|merge({class: (label_attr.class|default('') ~ ' required')|trim}) -%}
         {%- endif -%}
+
         {%- if parent_label_class is defined -%}
             {%- set label_attr = label_attr|merge({class: (label_attr.class|default('') ~ ' ' ~ parent_label_class)|trim}) -%}
         {%- endif -%}
         {%- if label is not same as(false) and label is empty -%}
+
             {%- if label_format is not empty -%}
                 {%- set label = label_format|replace({
                     '%name%': name,
@@ -98,9 +107,12 @@
                 {% set label = name|humanize %}
             {%- endif -%}
         {%- endif -%}
-        <label{% with { attr: label_attr } %}{{ block('attributes') }}{% endwith %}>
-            {{- widget|raw }} {{ label is not same as(false) ? (translation_domain is same as(false) ? label : label|trans({}, translation_domain)) -}}
-        </label>
+        s
+        {#        {{- form_label(form) -}}#}
+        {#        <label{% with { attr: label_attr } %}{{ block('attributes') }}{% endwith %}>#}
+        {#            {{- widget|raw }}#}
+        {#            {{ label is not same as(false) ? (translation_domain is same as(false) ? label : label|trans({}, translation_domain)) -}}#}
+        {#        </label>#}
     {%- endif -%}
 {%- endblock checkbox_radio_label %}
 
@@ -121,6 +133,7 @@
 {%- endblock button_row %}
 
 {% block choice_row -%}
+
     {% set force_error = true %}
     {{- block('form_row') }}
 {%- endblock choice_row %}
@@ -141,6 +154,7 @@
 {%- endblock datetime_row %}
 
 {% block checkbox_row -%}
+
     <div class="form-group{% if not valid %} has-error{% endif %}">
         {{- form_widget(form) -}}
         {{- form_errors(form) -}}
@@ -158,12 +172,12 @@
 
 {% block form_errors -%}
     {% if errors|length > 0 -%}
-    {% if form is not rootform %}<span class="help-block">{% else %}<div class="alert alert-danger">{% endif %}
-    <ul class="list-unstyled">
-        {%- for error in errors -%}
-            <li><span class="glyphicon glyphicon-exclamation-sign"></span> {{ error.message }}</li>
-        {%- endfor -%}
-    </ul>
-    {% if form is not rootform %}</span>{% else %}</div>{% endif %}
+        {% if form is not rootform %}<span class="help-block">{% else %}<div class="alert alert-danger">{% endif %}
+        <ul class="list-unstyled">
+            {%- for error in errors -%}
+                <li><span class="glyphicon glyphicon-exclamation-sign"></span> {{ error.message }}</li>
+            {%- endfor -%}
+        </ul>
+        {% if form is not rootform %}</span>{% else %}</div>{% endif %}
     {%- endif %}
 {%- endblock form_errors %}

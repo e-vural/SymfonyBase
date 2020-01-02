@@ -2,3 +2,13 @@ services:
 #    project_admin.example:
 #        class: Project\AdminBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+    Project\AdminBundle\Form\CustomExtensions\ImageTypeExtension:
+      arguments: ["@service_container"]
+      tags:
+        - { name: form.type_extension, extended_type: Symfony\Component\Form\Extension\Core\Type\FileType }
+
+
+    Project\AdminBundle\Form\CustomExtensions\FormTypeExtension:
+      arguments: ["@service_container"]
+      tags:
+        - { name: form.type_extension, extended_type: Symfony\Component\Form\Extension\Core\Type\FormType }

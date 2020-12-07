@@ -27,6 +27,7 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Project\AdminBundle\ProjectAdminBundle(),
             new Sg\DatatablesBundle\SgDatatablesBundle(),
+            new Project\MainBundle\ProjectMainBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

@@ -98,28 +98,45 @@ services:
         class: 'Monolog\Formatter\HtmlFormatter'
 
 #TODO deneme için burası. datatable override yapma çalışması
-    sg_datatables.datatable.abstract:
-        class: Project\AdminBundle\Datatables\Traits\AbstractDatatable
-        abstract: true
-        arguments:
-            - '@security.authorization_checker'
-            - '@security.token_storage'
-            - '@translator'
-            - '@router'
-            - '@doctrine.orm.entity_manager'
-            - '@twig'
-            - '@service_container'
+#    sg_datatables.datatable.abstract:
+#        class: Project\AdminBundle\Datatables\Traits\AbstractDatatable
+#        abstract: true
+#        arguments:
+#            - '@security.authorization_checker'
+#            - '@security.token_storage'
+#            - '@translator'
+#            - '@router'
+#            - '@doctrine.orm.entity_manager'
+#            - '@twig'
+#            - '@service_container'
+#
+#    sg_datatables.factory:
+#        class: Sg\DatatablesBundle\Datatable\DatatableFactory
+#        public: true
+#        arguments:
+#            - '@security.authorization_checker'
+#            - '@security.token_storage'
+#            - '@translator'
+#            - '@router'
+#            - '@doctrine.orm.entity_manager'
+#            - '@twig'
+#            - '@service_container'
 
-    sg_datatables.factory:
-        class: Sg\DatatablesBundle\Datatable\DatatableFactory
-        public: true
-        arguments:
-            - '@security.authorization_checker'
-            - '@security.token_storage'
-            - '@translator'
-            - '@router'
-            - '@doctrine.orm.entity_manager'
-            - '@twig'
-            - '@service_container'
+
+
+    login_listener:
+        class: Project\Utils\Core\Listeners\LoginListener
+        arguments: ["@service_container"]
+        tags:
+            - { name: 'kernel.event_listener', event: 'security.interactive_login' }
+
+    logout_listener:
+        class: Project\Utils\Core\Listeners\LogoutListener
+        arguments: ["@service_container"]
+
+    Project\Utils\Core\Listeners\DatabaseActivitySubscriber:
+        arguments: ["@service_container"]
+        tags:
+            - { name: 'doctrine.event_subscriber' }
 
 
